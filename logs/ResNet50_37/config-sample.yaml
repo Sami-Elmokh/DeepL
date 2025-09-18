@@ -1,0 +1,20 @@
+data:
+  batch_size: 32
+  num_workers: 4
+  trainpath: /mounts/Datasets4/GeoLifeCLEF2022
+  valid_ratio: 0.2
+logging:
+  logdir: /usr/users/sdi-labworks-2023-2024/sdi-labworks-2023-2024_34/deepchallenge4-team10/logs
+  wandb:
+    entity: nawsak40
+    project: sample
+loss: CrossEntropyLoss
+model:
+  cin: 33
+  class: ResNet50
+  num_classes: 17036
+nepochs: 3
+optim:
+  algo: Adam
+  params:
+    lr: 0.01
