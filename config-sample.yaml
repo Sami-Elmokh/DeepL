@@ -1,0 +1,26 @@
+data:
+  trainpath: '/mounts/Datasets4/GeoLifeCLEF2022'
+  # testpath: '/dummy/path/to/test'
+  batch_size: 32
+  num_workers: 4
+  valid_ratio: 0.2
+
+optim:
+  algo: Adam
+  params:
+    lr: 0.01
+
+nepochs: 12 #try for 10
+loss: "CrossEntropyLoss"
+
+logging:
+  wandb: 
+    project: sample
+    entity: nawsak40
+  logdir: "/usr/users/sdi-labworks-2023-2024/sdi-labworks-2023-2024_34/deep-learning-project/logs"  # Better to provide the fullpath, especially on the cluster
+# model:
+#   class: Linear
+model:
+  class: ResNet50
+  cin : 33 #to change to the number of input channels 33
+  num_classes : 17036 #to change to the number of categories
