@@ -1,4 +1,4 @@
-# DeepL# Deep Learning Challenge Group 8
+# DeepL# Deep Learning 
 
 ## Description
 
